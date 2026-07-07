@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Craftsmanship | 929 Jeans</title>
+
+  <style>
+    :root {
+      --black:#000;
+      --white:#fff;
+      --cream:#f8f6f2;
+      --soft:#f2eee8;
+      --line:#ded8cf;
+      --text:#111;
+      --muted:#666;
+      --brown:#6b3f26;
+    }
+
+    * { box-sizing:border-box; margin:0; padding:0; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color:var(--text);
+      background:var(--white);
+      line-height:1.6;
+    }
+
+    a { color:inherit; text-decoration:none; }
+    img { width:100%; display:block; object-fit:cover; }
+
+    .announcement {
+      background:var(--black);
+      color:#fff;
+      text-align:center;
+      padding:10px 16px;
+      font-size:12px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+    }
+
+    header {
+      height:96px;
+      padding:0 48px;
+      display:grid;
+      grid-template-columns:1fr auto 1fr;
+      align-items:center;
+      border-bottom:1px solid var(--line);
+      background:#fff;
+    }
+
+    nav {
+      display:flex;
+      gap:30px;
+      font-size:12px;
+      letter-spacing:1.5px;
+      text-transform:uppercase;
+    }
+
+    .nav-right { justify-content:flex-end; }
+
+    .logo {
+      font-family:Georgia, 'Times New Roman', serif;
+      font-size:66px;
+      letter-spacing:-5px;
+      line-height:.7;
+      text-align:center;
+    }
+
+    .logo span {
+      display:block;
+      font-family:Arial, Helvetica, sans-serif;
+      font-size:8px;
+      letter-spacing:7px;
+      margin-top:12px;
+    }
+
+    main {
+      max-width:1360px;
+      margin:auto;
+      padding:56px 48px 0;
+    }
+
+    h1, h2 {
+      font-family:Georgia, 'Times New Roman', serif;
+      font-weight:400;
+    }
+
+    h1 {
+      font-size:clamp(52px, 7vw, 88px);
+      line-height:1;
+      margin-bottom:24px;
+    }
+
+    .eyebrow {
+      font-size:13px;
+      letter-spacing:4px;
+      text-transform:uppercase;
+      font-weight:700;
+      margin-bottom:28px;
+    }
+
+    .hero {
+      display:grid;
+      grid-template-columns:.72fr 1.28fr;
+      gap:54px;
+      align-items:center;
+      margin-bottom:60px;
+    }
+
+    .hero-copy p {
+      max-width:440px;
+      margin-bottom:22px;
+      font-size:17px;
+    }
+
+    .hero-image img {
+      height:640px;
+      background:var(--soft);
+    }
+
+    .image-note {
+      text-align:center;
+      font-size:13px;
+      color:var(--muted);
+      margin-top:14px;
+    }
+
+    .brazil {
+      display:grid;
+      grid-template-columns:1fr 1.15fr;
+      gap:64px;
+      align-items:center;
+      padding:42px 0;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+
+    .brazil img { height:300px; background:var(--soft); }
+
+    .section-kicker {
+      font-size:14px;
+      letter-spacing:6px;
+      text-transform:uppercase;
+      margin-bottom:20px;
+      font-weight:600;
+    }
+
+    .brazil p {
+      max-width:650px;
+      color:#333;
+    }
+
+    .values {
+      display:grid;
+      grid-template-columns:repeat(4, 1fr);
+      gap:32px;
+      padding:50px 0;
+      border-bottom:1px solid var(--line);
+    }
+
+    .value {
+      text-align:center;
+      padding:0 20px;
+      border-right:1px solid var(--line);
+    }
+
+    .value:last-child { border-right:0; }
+
+    .icon {
+      font-size:34px;
+      margin-bottom:14px;
+    }
+
+    .value h3 {
+      font-size:12px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom:8px;
+    }
+
+    .value p {
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    .process {
+      padding:50px 0 30px;
+    }
+
+    .center-title {
+      text-align:center;
+      font-size:16px;
+      letter-spacing:7px;
+      text-transform:uppercase;
+      margin-bottom:34px;
+    }
+
+    .process-grid {
+      display:grid;
+      grid-template-columns:repeat(6, 1fr);
+      gap:22px;
+    }
+
+    .process-card img {
+      aspect-ratio:1 / .82;
+      background:var(--soft);
+      margin-bottom:14px;
+    }
+
+    .process-card h3 {
+      font-size:12px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom:8px;
+    }
+
+    .process-card p {
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    .banner {
+      margin:50px 0;
+      background:#1f1713;
+      color:#fff;
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      min-height:260px;
+      overflow:hidden;
+    }
+
+    .banner-copy {
+      padding:54px 64px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .banner h2 {
+      font-size:48px;
+      margin-bottom:12px;
+    }
+
+    .banner ul {
+      list-style:none;
+      display:grid;
+      gap:14px;
+    }
+
+    .banner li {
+      font-size:14px;
+      letter-spacing:.5px;
+    }
+
+    .quote {
+      text-align:center;
+      padding:30px 0 70px;
+    }
+
+    .quote p {
+      font-family:Georgia, 'Times New Roman', serif;
+      font-size:38px;
+      line-height:1.2;
+    }
+
+    .quote span {
+      display:block;
+      margin-top:14px;
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    footer {
+      background:var(--cream);
+      border-top:1px solid var(--line);
+      padding:48px;
+    }
+
+    .footer-inner {
+      max-width:1360px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:1.2fr repeat(3,1fr) 1.35fr;
+      gap:42px;
+    }
+
+    .footer-logo {
+      font-family:Georgia, 'Times New Roman', serif;
+      font-size:58px;
+      letter-spacing:-4px;
+      line-height:.7;
+    }
+
+    .footer-logo span {
+      display:block;
+      font-family:Arial, Helvetica, sans-serif;
+      font-size:7px;
+      letter-spacing:6px;
+      margin-top:10px;
+    }
+
+    footer h4 {
+      font-size:12px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom:16px;
+    }
+
+    footer p, footer li {
+      font-size:13px;
+      color:var(--muted);
+      list-style:none;
+      margin-bottom:8px;
+    }
+
+    .newsletter {
+      display:flex;
+      gap:8px;
+      margin-top:14px;
+    }
+
+    .newsletter input {
+      flex:1;
+      border:1px solid var(--line);
+      padding:13px;
+    }
+
+    .newsletter button {
+      background:#000;
+      color:#fff;
+      border:0;
+      padding:13px 18px;
+      font-size:11px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+    }
+
+    .copyright {
+      text-align:center;
+      font-size:12px;
+      color:var(--muted);
+      margin-top:34px;
+    }
+
+    @media(max-width:950px) {
+      header {
+        height:auto;
+        grid-template-columns:1fr;
+        gap:18px;
+        padding:24px;
+      }
+
+      nav, .nav-right {
+        justify-content:center;
+        flex-wrap:wrap;
+      }
+
+      .hero, .brazil, .banner {
+        grid-template-columns:1fr;
+      }
+
+      .hero-image img {
+        height:auto;
+      }
+
+      .values, .process-grid, .footer-inner {
+        grid-template-columns:1fr 1fr;
+      }
+    }
+
+    @media(max-width:620px) {
+      main, footer {
+        padding-left:22px;
+        padding-right:22px;
+      }
+
+      .values, .process-grid, .footer-inner {
+        grid-template-columns:1fr;
+      }
+
+      .value {
+        border-right:0;
+        border-bottom:1px solid var(--line);
+        padding-bottom:24px;
+      }
+
+      .banner-copy {
+        padding:36px 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="announcement">Made to order. Ships in 3–5 weeks.</div>
+
+  <header>
+    <nav>
+      <a href="/collections/all">Shop</a>
+      <a href="/pages/about">About</a>
+      <a href="/blogs/journal">Journal</a>
+    </nav>
+
+    <a class="logo" href="/">929<span>JEANS</span></a>
+
+    <nav class="nav-right">
+      <a href="/pages/made-to-order">Made to Order</a>
+      <a href="/account">Account</a>
+      <a href="/cart">Cart (0)</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <h1>Craftsmanship</h1>
+        <p class="eyebrow">Made with intention. Crafted to last.</p>
+        <p>
+          929 Jeans are crafted in Brazil by skilled artisans who bring generations of expertise in leather and garment making.
+        </p>
+        <p>
+          Every pair is a celebration of timeless craftsmanship, exceptional materials, and meticulous attention to detail.
+        </p>
+      </div>
+
+      <div class="hero-image">
+        <img src="images/929-right-back-pocket-embossed-logo.jpg" alt="Close up of brown suede 929 Jeans with logo embossed on the right back pocket" />
+        <p class="image-note">Our logo is embossed on the right back pocket as a mark of authenticity and craftsmanship.</p>
+      </div>
+    </section>
+
+    <section class="brazil">
+      <img src="images/brazil-leather-craftsmanship.jpg" alt="Brazil landscape representing where 929 Jeans are crafted" />
+
+      <div>
+        <p class="section-kicker">Crafted in Brazil</p>
+        <p>
+          Brazil is renowned for its mastery of leather. Our partners are family-owned ateliers with decades of experience working with some of the world’s most luxurious materials. Each pair of 929 Jeans is cut, sewn, and finished in Brazil with pride, precision, and care.
+        </p>
+      </div>
+    </section>
+
+    <section class="values">
+      <div class="value">
+        <div class="icon">◇</div>
+        <h3>Expert Artisans</h3>
+        <p>Generations of skill and a passion for perfection.</p>
+      </div>
+
+      <div class="value">
+        <div class="icon">♡</div>
+        <h3>Exceptional Materials</h3>
+        <p>We source only the finest lambskin suede.</p>
+      </div>
+
+      <div class="value">
+        <div class="icon">✂</div>
+        <h3>Timeless Design</h3>
+        <p>Two iconic fits. Endless ways to wear.</p>
+      </div>
+
+      <div class="value">
+        <div class="icon">∞</div>
+        <h3>Made to Order</h3>
+        <p>Crafted exclusively for you. No excess. No waste.</p>
+      </div>
+    </section>
+
+    <section class="process">
+      <h2 class="center-title">The Making of 929 Jeans</h2>
+
+      <div class="process-grid">
+        <article class="process-card">
+          <img src="images/selecting-lambskin-suede.jpg" alt="Soft lambskin suede selected for 929 Jeans" />
+          <h3>1. Selecting the Finest</h3>
+          <p>We source only the softest lambskin suede, chosen for its supple hand, durability, and natural beauty.</p>
+        </article>
+
+        <article class="process-card">
+          <img src="images/cutting-suede-pattern.jpg" alt="Artisan cutting suede pattern pieces" />
+          <h3>2. Precisely Cut</h3>
+          <p>Skilled hands cut each piece with precision to ensure the perfect fit and clean lines.</p>
+        </article>
+
+        <article class="process-card">
+          <img src="images/sewing-suede-jeans.jpg" alt="Suede jeans being sewn by an artisan" />
+          <h3>3. Expertly Sewn</h3>
+          <p>Our artisans bring each piece to life with expert stitching and reinforced construction.</p>
+        </article>
+
+        <article class="process-card">
+          <img src="images/929-hardware-stitching.jpg" alt="Close up of hardware and tonal stitching on suede jeans" />
+          <h3>4. Refined Details</h3>
+          <p>Custom hardware, tonal stitching, and thoughtful finishing touches elevate every pair.</p>
+        </article>
+
+        <article class="process-card">
+          <img src="images/garment-finished-suede.jpg" alt="Finished suede jeans being brushed by hand" />
+          <h3>5. Garment Finished</h3>
+          <p>Each pair is washed and brushed to enhance the suede’s buttery softness and rich texture.</p>
+        </article>
+
+        <article class="process-card">
+          <img src="images/929-jeans-packaging.jpg" alt="929 Jeans luxury packaging box" />
+          <h3>6. Made for You</h3>
+          <p>Inspected with care, wrapped beautifully, and shipped directly to you — made to order.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="banner">
+      <div class="banner-copy">
+        <h2>Soft as butter.</h2>
+        <p>A feel. A fit. A forever piece.</p>
+      </div>
+
+      <div class="banner-copy">
+        <ul>
+          <li><strong>Supple Lambskin Suede</strong><br />Buttery soft and naturally beautiful.</li>
+          <li><strong>Built to Last</strong><br />Exceptional durability that ages gracefully.</li>
+          <li><strong>Made to Move</strong><br />Designed to flatter every curve with effortless ease.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="quote">
+      <p>“True luxury is in the details.”</p>
+      <span>Every stitch. Every seam. Every pair.</span>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">929<span>JEANS</span></div>
+        <p>Luxury suede jeans made one pair at a time.</p>
+        <p>Designed for every curve. Made to be lived in.</p>
+      </div>
+
+      <div>
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="/collections/all">All Jeans</a></li>
+          <li><a href="/products/929-high">929 High</a></li>
+          <li><a href="/products/929-low">929 Low</a></li>
+          <li><a href="/pages/colors">Colors</a></li>
+          <li><a href="/pages/size-guide">Size Guide</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>About</h4>
+        <ul>
+          <li><a href="/pages/our-story">Our Story</a></li>
+          <li><a href="/pages/craftsmanship">Craftsmanship</a></li>
+          <li><a href="/pages/sustainability">Sustainability</a></li>
+          <li><a href="/blogs/journal">Journal</a></li>
+          <li><a href="/pages/contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="/pages/faq">FAQ</a></li>
+          <li><a href="/pages/shipping">Shipping</a></li>
+          <li><a href="/pages/returns">Returns</a></li>
+          <li><a href="/pages/care-guide">Care Guide</a></li>
+          <li><a href="/pages/terms">Terms</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Join The List</h4>
+        <p>Be the first to know about new colors and limited editions.</p>
+        <form class="newsletter" action="/contact#newsletter" method="post">
+          <input type="email" name="email" placeholder="Email address" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <p class="copyright">© 2026 929 Jeans. All rights reserved.</p>
+  </footer>
+</body>
+</html>

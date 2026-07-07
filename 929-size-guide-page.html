@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Size Guide | 929 Jeans</title>
+
+  <style>
+    :root {
+      --black: #000;
+      --white: #fff;
+      --cream: #f8f6f2;
+      --soft: #f2eee8;
+      --line: #ded8cf;
+      --text: #111;
+      --muted: #666;
+      --blush: #e4c0cc;
+      --camel: #c69c6d;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .announcement {
+      background: var(--black);
+      color: #fff;
+      text-align: center;
+      padding: 10px 16px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    header {
+      height: 96px;
+      padding: 0 48px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+      background: #fff;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .nav-right {
+      justify-content: flex-end;
+    }
+
+    .logo {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 66px;
+      letter-spacing: -5px;
+      line-height: .7;
+      text-align: center;
+    }
+
+    .logo span {
+      display: block;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 8px;
+      letter-spacing: 7px;
+      margin-top: 12px;
+    }
+
+    main {
+      max-width: 1360px;
+      margin: auto;
+      padding: 56px 48px 0;
+    }
+
+    h1, h2 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-weight: 400;
+    }
+
+    h1 {
+      font-size: clamp(52px, 7vw, 90px);
+      line-height: 1;
+      margin-bottom: 24px;
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 28px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: .82fr 1.18fr;
+      gap: 54px;
+      align-items: center;
+      margin-bottom: 64px;
+    }
+
+    .hero-copy p {
+      max-width: 500px;
+      margin-bottom: 22px;
+      font-size: 17px;
+    }
+
+    .hero-image {
+      background: var(--soft);
+      min-height: 600px;
+      display: grid;
+      place-items: center;
+      padding: 40px;
+    }
+
+    .hero-image img {
+      height: 520px;
+      background: var(--cream);
+    }
+
+    .quick-guide {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      padding: 48px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .guide-card {
+      background: var(--cream);
+      padding: 34px;
+      min-height: 240px;
+    }
+
+    .guide-number {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    .guide-card h3 {
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .guide-card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .measure-section {
+      padding: 64px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 54px;
+      align-items: center;
+    }
+
+    .measure-section h2 {
+      font-size: 54px;
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .measure-section p {
+      color: #333;
+      margin-bottom: 18px;
+      max-width: 580px;
+    }
+
+    .measure-list {
+      margin-top: 24px;
+      list-style: none;
+      display: grid;
+      gap: 14px;
+    }
+
+    .measure-list li {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 12px;
+      color: #333;
+    }
+
+    .measure-list strong {
+      display: block;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--black);
+      margin-bottom: 4px;
+    }
+
+    .size-chart {
+      margin-bottom: 70px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 16px;
+      letter-spacing: 7px;
+      text-transform: uppercase;
+      margin-bottom: 34px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      border: 1px solid var(--line);
+    }
+
+    th, td {
+      border-bottom: 1px solid var(--line);
+      border-right: 1px solid var(--line);
+      padding: 17px 12px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    th {
+      background: var(--cream);
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    td:first-child {
+      font-weight: 700;
+    }
+
+    .fit-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 70px;
+    }
+
+    .fit-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: center;
+      background: var(--soft);
+      padding: 38px;
+    }
+
+    .fit-card h2 {
+      font-size: 42px;
+      margin-bottom: 14px;
+    }
+
+    .fit-card p {
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #000;
+      color: #fff;
+      padding: 15px 30px;
+      margin-top: 16px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .help-box {
+      background: #111;
+      color: #fff;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 46px;
+      padding: 58px;
+      margin-bottom: 70px;
+    }
+
+    .help-box h2 {
+      font-size: 50px;
+      line-height: 1.05;
+      margin-bottom: 14px;
+    }
+
+    .help-box p {
+      color: #ddd;
+      margin-bottom: 16px;
+    }
+
+    .help-links {
+      display: grid;
+      gap: 14px;
+      align-content: center;
+    }
+
+    .help-links a {
+      border: 1px solid rgba(255,255,255,.35);
+      padding: 16px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    footer {
+      background: var(--cream);
+      border-top: 1px solid var(--line);
+      padding: 48px;
+    }
+
+    .footer-inner {
+      max-width: 1360px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.2fr repeat(3, 1fr) 1.35fr;
+      gap: 42px;
+    }
+
+    .footer-logo {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 58px;
+      letter-spacing: -4px;
+      line-height: .7;
+    }
+
+    .footer-logo span {
+      display: block;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 7px;
+      letter-spacing: 6px;
+      margin-top: 10px;
+    }
+
+    footer h4 {
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    footer p, footer li {
+      font-size: 13px;
+      color: var(--muted);
+      list-style: none;
+      margin-bottom: 8px;
+    }
+
+    .newsletter {
+      display: flex;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .newsletter input {
+      flex: 1;
+      border: 1px solid var(--line);
+      padding: 13px;
+    }
+
+    .newsletter button {
+      background: #000;
+      color: #fff;
+      border: 0;
+      padding: 13px 18px;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .copyright {
+      text-align: center;
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 34px;
+    }
+
+    @media(max-width: 950px) {
+      header {
+        height: auto;
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 24px;
+      }
+
+      nav, .nav-right {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .hero, .measure-section, .help-box {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-guide, .fit-section, .footer-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-image {
+        min-height: auto;
+      }
+
+      .hero-image img {
+        height: auto;
+      }
+
+      .fit-card {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media(max-width: 620px) {
+      main, footer {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+
+      .quick-guide, .fit-section, .footer-inner {
+        grid-template-columns: 1fr;
+      }
+
+      th, td {
+        font-size: 12px;
+        padding: 12px 6px;
+      }
+
+      .help-box {
+        padding: 34px 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="announcement">Made to order. Choose carefully. Made just for you.</div>
+
+  <header>
+    <nav>
+      <a href="/collections/all">Shop</a>
+      <a href="/pages/about">About</a>
+      <a href="/blogs/journal">Journal</a>
+    </nav>
+
+    <a class="logo" href="/">929<span>JEANS</span></a>
+
+    <nav class="nav-right">
+      <a href="/pages/made-to-order">Made to Order</a>
+      <a href="/account">Account</a>
+      <a href="/cart">Cart (0)</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <h1>Size Guide</h1>
+        <p class="eyebrow">Find your perfect 929 fit.</p>
+        <p>
+          Because each pair of 929 Jeans is made to order, choosing the right size and fit is important.
+        </p>
+        <p>
+          Use this guide to measure your body, compare your measurements, and decide whether 929 High or 929 Low is right for you.
+        </p>
+      </div>
+
+      <div class="hero-image">
+        <img src="images/929-size-guide-model-blush.jpg" alt="Model wearing blush suede 929 Jeans with a white V-neck t-shirt" />
+      </div>
+    </section>
+
+    <section class="quick-guide">
+      <article class="guide-card">
+        <div class="guide-number">01</div>
+        <h3>Measure Your Waist</h3>
+        <p>Measure where you want your jeans to sit: natural waist for 929 High or below the hip for 929 Low.</p>
+      </article>
+
+      <article class="guide-card">
+        <div class="guide-number">02</div>
+        <h3>Measure Your Hips</h3>
+        <p>Wrap the tape around the fullest part of your hips. Keep the tape level and relaxed.</p>
+      </article>
+
+      <article class="guide-card">
+        <div class="guide-number">03</div>
+        <h3>Choose Your Length</h3>
+        <p>Select Petite, Regular, or Tall depending on your height and how you want the jeans to fall over your boots.</p>
+      </article>
+    </section>
+
+    <section class="measure-section">
+      <div>
+        <h2>How to measure.</h2>
+        <p>
+          Use a soft measuring tape and stand naturally. Do not pull the tape too tight. Suede has structure, so we recommend choosing the size that best matches your actual measurements.
+        </p>
+
+        <ul class="measure-list">
+          <li><strong>Natural Waist</strong>Measure the smallest part of your waist.</li>
+          <li><strong>Low Waist</strong>Measure where a low-rise jean would sit, usually below the navel.</li>
+          <li><strong>Hips</strong>Measure the fullest part of your hips and seat.</li>
+          <li><strong>Inseam</strong>Measure from the inner thigh down to where you want the hem to land.</li>
+        </ul>
+      </div>
+
+      <img src="images/how-to-measure-929-jeans.jpg" alt="Illustration showing how to measure waist, hips, and inseam for 929 Jeans" />
+    </section>
+
+    <section class="size-chart">
+      <h2 class="section-title">929 Size Chart</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>929 Size</th>
+            <th>US Size</th>
+            <th>Natural Waist</th>
+            <th>Low Waist</th>
+            <th>Hip</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr><td>24</td><td>00</td><td>24&quot;</td><td>27&quot;</td><td>34&quot;</td></tr>
+          <tr><td>25</td><td>0</td><td>25&quot;</td><td>28&quot;</td><td>35&quot;</td></tr>
+          <tr><td>26</td><td>2</td><td>26&quot;</td><td>29&quot;</td><td>36&quot;</td></tr>
+          <tr><td>27</td><td>4</td><td>27&quot;</td><td>30&quot;</td><td>37&quot;</td></tr>
+          <tr><td>28</td><td>6</td><td>28&quot;</td><td>31&quot;</td><td>38&quot;</td></tr>
+          <tr><td>29</td><td>8</td><td>29&quot;</td><td>32&quot;</td><td>39&quot;</td></tr>
+          <tr><td>30</td><td>10</td><td>30&quot;</td><td>33&quot;</td><td>40&quot;</td></tr>
+          <tr><td>31</td><td>12</td><td>31.5&quot;</td><td>34.5&quot;</td><td>41.5&quot;</td></tr>
+          <tr><td>32</td><td>14</td><td>33&quot;</td><td>36&quot;</td><td>43&quot;</td></tr>
+          <tr><td>33</td><td>16</td><td>34.5&quot;</td><td>37.5&quot;</td><td>44.5&quot;</td></tr>
+          <tr><td>34</td><td>18</td><td>36&quot;</td><td>39&quot;</td><td>46&quot;</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="fit-section">
+      <article class="fit-card">
+        <div>
+          <h2>929 High</h2>
+          <p>Choose 929 High if you prefer a polished high waist that sits at the natural waist.</p>
+          <p>Best for a longer leg line, tucked-in tops, bodysuits, and classic styling.</p>
+          <a class="button" href="/products/929-high">Shop 929 High</a>
+        </div>
+
+        <img src="images/929-high-fit-guide.jpg" alt="929 High suede jeans fit guide" />
+      </article>
+
+      <article class="fit-card">
+        <div>
+          <h2>929 Low</h2>
+          <p>Choose 929 Low if you prefer an easy low-rise fit that sits below the hip.</p>
+          <p>Best for relaxed styling, cropped tees, tanks, and early 2000s inspired looks.</p>
+          <a class="button" href="/products/929-low">Shop 929 Low</a>
+        </div>
+
+        <img src="images/929-low-fit-guide.jpg" alt="929 Low suede jeans fit guide" />
+      </article>
+    </section>
+
+    <section class="help-box">
+      <div>
+        <h2>Need help choosing?</h2>
+        <p>
+          Because 929 Jeans are made to order, we want you to feel confident before placing your order.
+        </p>
+        <p>
+          Send us your waist, hip, height, and preferred fit, and we will help you choose the best size.
+        </p>
+      </div>
+
+      <div class="help-links">
+        <a href="/pages/contact">Contact Fit Support</a>
+        <a href="mailto:hello@929jeans.com?subject=929%20Jeans%20Fit%20Help">Email Fit Help</a>
+        <a href="/pages/returns">Read Made-to-Order Policy</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">929<span>JEANS</span></div>
+        <p>Luxury suede jeans made one pair at a time.</p>
+        <p>Designed for every curve. Made to be lived in.</p>
+      </div>
+
+      <div>
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="/collections/all">All Jeans</a></li>
+          <li><a href="/products/929-high">929 High</a></li>
+          <li><a href="/products/929-low">929 Low</a></li>
+          <li><a href="/pages/colors">Colors</a></li>
+          <li><a href="/pages/size-guide">Size Guide</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>About</h4>
+        <ul>
+          <li><a href="/pages/our-story">Our Story</a></li>
+          <li><a href="/pages/craftsmanship">Craftsmanship</a></li>
+          <li><a href="/pages/sustainability">Sustainability</a></li>
+          <li><a href="/blogs/journal">Journal</a></li>
+          <li><a href="/pages/contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="/pages/faq">FAQ</a></li>
+          <li><a href="/pages/shipping">Shipping</a></li>
+          <li><a href="/pages/returns">Returns</a></li>
+          <li><a href="/pages/care-guide">Care Guide</a></li>
+          <li><a href="/pages/terms">Terms</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Join The List</h4>
+        <p>Be the first to know about new colors and limited editions.</p>
+        <form class="newsletter" action="/contact#newsletter" method="post">
+          <input type="email" name="email" placeholder="Email address" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <p class="copyright">© 2026 929 Jeans. All rights reserved.</p>
+  </footer>
+</body>
+</html>

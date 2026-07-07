@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sustainability | 929 Jeans</title>
+
+  <style>
+    :root {
+      --black:#000;
+      --white:#fff;
+      --cream:#f8f6f2;
+      --soft:#f1eee8;
+      --earth:#d8c8b6;
+      --sage:#c4c89e;
+      --line:#ded8cf;
+      --text:#111;
+      --muted:#666;
+    }
+
+    * { box-sizing:border-box; margin:0; padding:0; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color:var(--text);
+      background:var(--white);
+      line-height:1.6;
+    }
+
+    a { color:inherit; text-decoration:none; }
+    img { width:100%; display:block; object-fit:cover; }
+
+    .announcement {
+      background:var(--black);
+      color:#fff;
+      text-align:center;
+      padding:10px 16px;
+      font-size:12px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+    }
+
+    header {
+      height:96px;
+      padding:0 48px;
+      display:grid;
+      grid-template-columns:1fr auto 1fr;
+      align-items:center;
+      border-bottom:1px solid var(--line);
+      background:#fff;
+    }
+
+    nav {
+      display:flex;
+      gap:30px;
+      font-size:12px;
+      letter-spacing:1.5px;
+      text-transform:uppercase;
+    }
+
+    .nav-right { justify-content:flex-end; }
+
+    .logo {
+      font-family:Georgia, 'Times New Roman', serif;
+      font-size:66px;
+      letter-spacing:-5px;
+      line-height:.7;
+      text-align:center;
+    }
+
+    .logo span {
+      display:block;
+      font-family:Arial, Helvetica, sans-serif;
+      font-size:8px;
+      letter-spacing:7px;
+      margin-top:12px;
+    }
+
+    main {
+      max-width:1360px;
+      margin:auto;
+      padding:56px 48px 0;
+    }
+
+    h1, h2 {
+      font-family:Georgia, 'Times New Roman', serif;
+      font-weight:400;
+    }
+
+    h1 {
+      font-size:clamp(52px, 7vw, 92px);
+      line-height:1;
+      margin-bottom:24px;
+    }
+
+    .eyebrow {
+      font-size:13px;
+      letter-spacing:4px;
+      text-transform:uppercase;
+      font-weight:700;
+      margin-bottom:28px;
+    }
+
+    .hero {
+      display:grid;
+      grid-template-columns:.78fr 1.22fr;
+      gap:54px;
+      align-items:center;
+      margin-bottom:64px;
+    }
+
+    .hero-copy p {
+      max-width:470px;
+      margin-bottom:22px;
+      font-size:17px;
+    }
+
+    .hero-image {
+      background:var(--soft);
+      min-height:620px;
+      display:grid;
+      place-items:center;
+      padding:40px;
+    }
+
+    .hero-image img {
+      height:540px;
+      background:var(--earth);
+    }
+
+    .pillars {
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:28px;
+      padding:48px 0;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+
+    .pillar {
+      padding:34px;
+      background:var(--cream);
+      min-height:260px;
+    }
+
+    .icon {
+      font-size:34px;
+      margin-bottom:18px;
+    }
+
+    .pillar h3 {
+      font-size:13px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom:14px;
+    }
+
+    .pillar p {
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    .made-to-order {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:54px;
+      align-items:center;
+      padding:64px 0;
+    }
+
+    .made-to-order h2 {
+      font-size:54px;
+      line-height:1.05;
+      margin-bottom:22px;
+    }
+
+    .made-to-order p {
+      color:#333;
+      margin-bottom:18px;
+      max-width:560px;
+    }
+
+    .made-to-order img {
+      height:460px;
+      background:var(--soft);
+    }
+
+    .impact {
+      background:#111;
+      color:#fff;
+      margin:20px 0 60px;
+      padding:58px;
+      display:grid;
+      grid-template-columns:.8fr 1.2fr;
+      gap:54px;
+      align-items:start;
+    }
+
+    .impact h2 {
+      font-size:50px;
+      line-height:1.05;
+    }
+
+    .impact-list {
+      display:grid;
+      gap:24px;
+    }
+
+    .impact-item {
+      border-bottom:1px solid rgba(255,255,255,.2);
+      padding-bottom:22px;
+    }
+
+    .impact-item h3 {
+      font-size:12px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom:8px;
+    }
+
+    .impact-item p {
+      color:#d8d8d8;
+      font-size:15px;
+    }
+
+    .section-title {
+      text-align:center;
+      font-size:16px;
+      letter-spacing:7px;
+      text-transform:uppercase;
+      margin-bottom:34px;
+    }
+
+    .steps {
+      display:grid;
+      grid-template-columns:repeat(5, 1fr);
+      gap:22px;
+      margin-bottom:64px;
+    }
+
+    .step {
+      text-align:center;
+      padding:26px 18px;
+      border:1px solid var(--line);
+      background:#fff;
+    }
+
+    .step-number {
+      font-family:Georgia, 'Times New Roman', serif;
+      font-size:42px;
+      margin-bottom:12px;
+    }
+
+    .step h3 {
+      font-size:12px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom:8px;
+    }
+
+    .step p {
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    .care {
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:48px;
+      background:var(--cream);
+      padding:54px;
+      margin-bottom:70px;
+    }
+
+    .care h2 {
+      font-size:48px;
+      margin-bottom:18px;
+    }
+
+    .care ul {
+      list-style:none;
+      display:grid;
+      gap:13px;
+      color:#333;
+    }
+
+    .care li::before {
+      content:"— ";
+    }
+
+    .button {
+      display:inline-block;
+      background:#000;
+      color:#fff;
+      padding:15px 30px;
+      margin-top:26px;
+      font-size:12px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+    }
+
+    footer {
+      background:var(--cream);
+      border-top:1px solid var(--line);
+      padding:48px;
+    }
+
+    .footer-inner {
+      max-width:1360px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:1.2fr repeat(3,1fr) 1.35fr;
+      gap:42px;
+    }
+
+    .footer-logo {
+      font-family:Georgia, 'Times New Roman', serif;
+      font-size:58px;
+      letter-spacing:-4px;
+      line-height:.7;
+    }
+
+    .footer-logo span {
+      display:block;
+      font-family:Arial, Helvetica, sans-serif;
+      font-size:7px;
+      letter-spacing:6px;
+      margin-top:10px;
+    }
+
+    footer h4 {
+      font-size:12px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom:16px;
+    }
+
+    footer p, footer li {
+      font-size:13px;
+      color:var(--muted);
+      list-style:none;
+      margin-bottom:8px;
+    }
+
+    .newsletter {
+      display:flex;
+      gap:8px;
+      margin-top:14px;
+    }
+
+    .newsletter input {
+      flex:1;
+      border:1px solid var(--line);
+      padding:13px;
+    }
+
+    .newsletter button {
+      background:#000;
+      color:#fff;
+      border:0;
+      padding:13px 18px;
+      font-size:11px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+    }
+
+    .copyright {
+      text-align:center;
+      font-size:12px;
+      color:var(--muted);
+      margin-top:34px;
+    }
+
+    @media(max-width:950px) {
+      header {
+        height:auto;
+        grid-template-columns:1fr;
+        gap:18px;
+        padding:24px;
+      }
+
+      nav, .nav-right {
+        justify-content:center;
+        flex-wrap:wrap;
+      }
+
+      .hero, .made-to-order, .impact, .care {
+        grid-template-columns:1fr;
+      }
+
+      .pillars, .steps, .footer-inner {
+        grid-template-columns:1fr 1fr;
+      }
+
+      .hero-image {
+        min-height:auto;
+      }
+
+      .hero-image img, .made-to-order img {
+        height:auto;
+      }
+    }
+
+    @media(max-width:620px) {
+      main, footer {
+        padding-left:22px;
+        padding-right:22px;
+      }
+
+      .pillars, .steps, .footer-inner {
+        grid-template-columns:1fr;
+      }
+
+      .impact, .care {
+        padding:34px 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="announcement">Made to order. Less waste. More intention.</div>
+
+  <header>
+    <nav>
+      <a href="/collections/all">Shop</a>
+      <a href="/pages/about">About</a>
+      <a href="/blogs/journal">Journal</a>
+    </nav>
+
+    <a class="logo" href="/">929<span>JEANS</span></a>
+
+    <nav class="nav-right">
+      <a href="/pages/made-to-order">Made to Order</a>
+      <a href="/account">Account</a>
+      <a href="/cart">Cart (0)</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <h1>Sustainability</h1>
+        <p class="eyebrow">Luxury with less excess.</p>
+        <p>
+          929 Jeans was built around a simple idea: make only what is ordered, choose materials with care, and create pieces worth keeping.
+        </p>
+        <p>
+          Our made-to-order model helps reduce overproduction while giving every customer a garment created specifically for them.
+        </p>
+      </div>
+
+      <div class="hero-image">
+        <img src="images/929-sustainable-suede-jeans.jpg" alt="929 suede jeans on a clean natural background representing sustainable luxury fashion" />
+      </div>
+    </section>
+
+    <section class="pillars">
+      <article class="pillar">
+        <div class="icon">∞</div>
+        <h3>Made to Order</h3>
+        <p>
+          We do not mass produce. Every pair begins only after an order is placed, helping reduce unsold inventory and unnecessary waste.
+        </p>
+      </article>
+
+      <article class="pillar">
+        <div class="icon">◇</div>
+        <h3>Responsible Materials</h3>
+        <p>
+          We focus on premium lambskin suede selected for softness, longevity, and beauty, with an emphasis on using material wisely.
+        </p>
+      </article>
+
+      <article class="pillar">
+        <div class="icon">♡</div>
+        <h3>Designed to Last</h3>
+        <p>
+          True sustainability starts with clothing that feels special enough to keep, repair, care for, and wear for years.
+        </p>
+      </article>
+    </section>
+
+    <section class="made-to-order">
+      <div>
+        <h2>Made only when you order.</h2>
+        <p>
+          Traditional fashion often produces more than it sells. Our approach is different. We create each pair individually, allowing demand to guide production.
+        </p>
+        <p>
+          This keeps the brand lean, limits unnecessary inventory, and allows us to focus on craftsmanship instead of volume.
+        </p>
+        <a class="button" href="/pages/made-to-order">Learn About Made to Order</a>
+      </div>
+
+      <img src="images/929-jeans-made-to-order-process.jpg" alt="Craftsperson preparing suede panels for made-to-order 929 Jeans" />
+    </section>
+
+    <section class="impact">
+      <div>
+        <h2>Our low-waste approach.</h2>
+      </div>
+
+      <div class="impact-list">
+        <div class="impact-item">
+          <h3>No Bulk Inventory</h3>
+          <p>We avoid producing large quantities before there is a confirmed customer order.</p>
+        </div>
+
+        <div class="impact-item">
+          <h3>Smarter Cutting</h3>
+          <p>Patterns are planned carefully to help reduce material waste during production.</p>
+        </div>
+
+        <div class="impact-item">
+          <h3>Limited Color Runs</h3>
+          <p>Colors are introduced intentionally, helping us stay focused and reduce excess sourcing.</p>
+        </div>
+
+        <div class="impact-item">
+          <h3>Quality Over Quantity</h3>
+          <p>We create fewer pieces with more care, encouraging thoughtful buying instead of overconsumption.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">The 929 Sustainability Promise</h2>
+
+      <div class="steps">
+        <article class="step">
+          <div class="step-number">01</div>
+          <h3>Order</h3>
+          <p>You choose your fit, color, size, and length.</p>
+        </article>
+
+        <article class="step">
+          <div class="step-number">02</div>
+          <h3>Produce</h3>
+          <p>We make your jeans only after your order is confirmed.</p>
+        </article>
+
+        <article class="step">
+          <div class="step-number">03</div>
+          <h3>Inspect</h3>
+          <p>Every pair is checked carefully before it leaves our atelier.</p>
+        </article>
+
+        <article class="step">
+          <div class="step-number">04</div>
+          <h3>Pack</h3>
+          <p>We use refined packaging designed to feel beautiful and considered.</p>
+        </article>
+
+        <article class="step">
+          <div class="step-number">05</div>
+          <h3>Keep</h3>
+          <p>We create pieces meant to stay in your closet, not disappear after one season.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="care">
+      <div>
+        <h2>Care is part of sustainability.</h2>
+        <p>
+          Suede is a luxury material. When cared for properly, it becomes even more beautiful with time.
+        </p>
+        <a class="button" href="/pages/care-guide">Read the Care Guide</a>
+      </div>
+
+      <div>
+        <ul>
+          <li>Brush gently with a suede brush after wear.</li>
+          <li>Store in a breathable garment bag.</li>
+          <li>Avoid prolonged exposure to rain or heavy moisture.</li>
+          <li>Use a professional leather cleaner when needed.</li>
+          <li>Keep away from direct heat and harsh chemicals.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">929<span>JEANS</span></div>
+        <p>Luxury suede jeans made one pair at a time.</p>
+        <p>Designed for every curve. Made to be lived in.</p>
+      </div>
+
+      <div>
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="/collections/all">All Jeans</a></li>
+          <li><a href="/products/929-high">929 High</a></li>
+          <li><a href="/products/929-low">929 Low</a></li>
+          <li><a href="/pages/colors">Colors</a></li>
+          <li><a href="/pages/size-guide">Size Guide</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>About</h4>
+        <ul>
+          <li><a href="/pages/our-story">Our Story</a></li>
+          <li><a href="/pages/craftsmanship">Craftsmanship</a></li>
+          <li><a href="/pages/sustainability">Sustainability</a></li>
+          <li><a href="/blogs/journal">Journal</a></li>
+          <li><a href="/pages/contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="/pages/faq">FAQ</a></li>
+          <li><a href="/pages/shipping">Shipping</a></li>
+          <li><a href="/pages/returns">Returns</a></li>
+          <li><a href="/pages/care-guide">Care Guide</a></li>
+          <li><a href="/pages/terms">Terms</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Join The List</h4>
+        <p>Be the first to know about new colors and limited editions.</p>
+        <form class="newsletter" action="/contact#newsletter" method="post">
+          <input type="email" name="email" placeholder="Email address" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <p class="copyright">© 2026 929 Jeans. All rights reserved.</p>
+  </footer>
+</body>
+</html>
